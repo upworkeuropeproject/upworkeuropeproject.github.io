@@ -131,10 +131,6 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  z-index: 1;
-  left: 50%;
-  transform: translateX(-50%);
 }
 .uw__header__text {
   display: flex;
