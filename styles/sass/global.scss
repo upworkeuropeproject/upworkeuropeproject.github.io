@@ -1,0 +1,54 @@
+$margin-side: 400px;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Glacial Indifference", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    word-wrap: break-word; 
+}
+
+header {
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+section {
+    height: 300px;
+    
+    padding-top: 30px;
+    padding-right: $margin-side;
+    padding-left: $margin-side;
+    padding-bottom: 30px;
+}
+
+footer {
+    height: 400px;
+
+    display: flex;
+    align-items:baseline;
+    justify-content: center;
+
+    padding-top: 30px;
+    padding-right: $margin-side;
+    padding-left: $margin-side;
+    padding-bottom: 30px;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 400;
+    word-wrap: break-word; 
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: 700;
+}
