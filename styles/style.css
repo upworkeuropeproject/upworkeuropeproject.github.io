@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -52,6 +53,27 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: "Glacial Indifference";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/GlacialIndifference-Regular.otf") format("opentype"), local("Glacial Indifference");
+  font-size: 16px; /* Tamaño de fuente para Regular */
+}
+@font-face {
+  font-family: "Glacial Indifference";
+  font-style: italic;
+  font-weight: 400;
+  src: url("fonts/GlacialIndifference-Italic.otf") format("opentype"), local("Glacial Indifference");
+  font-size: 16px; /* Tamaño de fuente para Italic */
+}
+@font-face {
+  font-family: "Glacial Indifference";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/GlacialIndifference-Bold.otf") format("opentype"), local("Glacial Indifference");
+  font-size: 16px; /* Tamaño de fuente para Italic */
+}
 html {
   scroll-behavior: smooth;
 }
@@ -59,7 +81,6 @@ html {
 body {
   font-family: "Glacial Indifference", sans-serif;
   font-size: 30px;
-  font-weight: 400;
   word-wrap: break-word;
 }
 
@@ -92,26 +113,33 @@ footer {
 
 h1 {
   font-size: 60px;
-  font-weight: 400;
   word-wrap: break-word;
 }
 
 h3 {
   font-size: 40px;
-  font-weight: 700;
 }
 
 @font-face {
   font-family: "Glacial Indifference";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/GlacialIndifference-Regular.otf") format("otf"), local("Glacial Indifference");
+  src: url("fonts/GlacialIndifference-Regular.otf") format("opentype"), local("Glacial Indifference");
+  font-size: 16px; /* Tamaño de fuente para Regular */
+}
+@font-face {
+  font-family: "Glacial Indifference";
+  font-style: italic;
+  font-weight: 400;
+  src: url("fonts/GlacialIndifference-Italic.otf") format("opentype"), local("Glacial Indifference");
+  font-size: 16px; /* Tamaño de fuente para Italic */
 }
 @font-face {
   font-family: "Glacial Indifference";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/GlacialIndifference-Bold.otf") format("otf"), local("Glacial Indifference");
+  src: url("fonts/GlacialIndifference-Bold.otf") format("opentype"), local("Glacial Indifference");
+  font-size: 16px; /* Tamaño de fuente para Italic */
 }
 .uw__header {
   color: black;
@@ -169,7 +197,6 @@ h3 {
 }
 .uw__header__nav__item a {
   font-size: 30px;
-  font-weight: 400;
   word-wrap: break-word;
   text-decoration: none;
   display: block;
@@ -182,45 +209,6 @@ h3 {
 }
 .uw__header__nav__item:hover a {
   color: #ccc;
-}
-
-.uw__draw {
-  color: white;
-  background-color: #5BAAAE;
-}
-
-.uw__objetive {
-  color: white;
-  background-color: #F47149;
-}
-.uw__objetive__content {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  flex-direction: column;
-  row-gap: 20px;
-}
-
-.uw__stactic {
-  color: white;
-  background-color: #DAB6C2;
-}
-
-.uw__about {
-  color: white;
-  background-color: #FA5F5B;
-}
-.uw__about__content {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  flex-direction: column;
-  row-gap: 20px;
-}
-
-.uw__partners {
-  color: black;
-  background-color: white;
 }
 
 .uw__footer {
@@ -283,6 +271,309 @@ h3 {
 }
 .uw__footer__up:hover a {
   color: #ccc;
+}
+
+.uw__draw {
+  color: white;
+  background-color: #5BAAAE;
+}
+.uw__draw__content {
+  position: relative;
+  height: 100%;
+}
+.uw__draw__content svg {
+  position: absolute;
+}
+.uw__draw__content image {
+  width: 100%;
+  height: 100%;
+}
+.uw__draw__burbujas {
+  width: 115px;
+  height: 120px;
+  right: 35%;
+  transition: transform 0.3s ease;
+}
+.uw__draw__burbujas:hover {
+  transform: rotate(-10deg);
+}
+.uw__draw__cuadros {
+  width: 200px;
+  height: 210px;
+  left: 30%;
+  top: 30%;
+  transition: transform 0.6s ease;
+}
+.uw__draw__cuadros:hover {
+  transform: rotate(20deg);
+}
+.uw__draw__ellipse {
+  width: 115px;
+  height: 120px;
+  right: 15%;
+  top: 60%;
+  transition: transform 0.6s ease;
+}
+.uw__draw__ellipse:hover {
+  transform: rotate(-5deg);
+}
+.uw__draw__morea {
+  width: 115px;
+  height: 120px;
+  right: 5%;
+  top: -5%;
+  transition: transform 0.3s ease;
+}
+.uw__draw__morea:hover {
+  transform: rotate(-15deg);
+}
+.uw__draw__naranja {
+  width: 115px;
+  height: 120px;
+  right: 13%;
+  top: 55%;
+  transition: transform 0.6s ease;
+}
+.uw__draw__naranja:hover {
+  transform: rotate(-5deg);
+}
+.uw__draw__small {
+  width: 80px;
+  height: 75px;
+  left: 15%;
+  top: 55%;
+  transition: transform 0.6s ease;
+}
+.uw__draw__small:hover {
+  transform: rotate(-25deg);
+}
+.uw__draw__hat {
+  width: 115px;
+  height: 120px;
+  right: -5%;
+  top: 70%;
+  transition: transform 0.6s ease;
+}
+.uw__draw__hat:hover {
+  transform: rotate(10deg);
+}
+.uw__draw__light {
+  width: 100px;
+  height: 105px;
+  left: 30%;
+  top: -5%;
+  transform: rotate(-30deg);
+  transition: transform 0.6s ease;
+}
+.uw__draw__light:hover {
+  transform: rotate(-5deg);
+}
+.uw__draw__pc {
+  width: 100px;
+  height: 105px;
+  left: 5%;
+  top: 65%;
+  transition: transform 0.6s ease;
+}
+.uw__draw__pc:hover {
+  transform: rotate(-5deg);
+}
+.uw__draw__smile {
+  width: 115px;
+  height: 120px;
+  right: 20%;
+  top: 60%;
+  transform: rotate(5deg);
+  transition: transform 0.6s ease;
+}
+.uw__draw__smile:hover {
+  transform: rotate(-5deg);
+}
+.uw__draw__caracol {
+  width: 180px;
+  height: 190px;
+  left: 5%;
+  stroke: black;
+  fill: transparent;
+  stroke-width: 1;
+  stroke-dasharray: 15 10;
+  stroke-dashoffset: 20;
+  transition: stroke-dashoffset 0.5s ease;
+}
+.uw__draw__caracol:hover {
+  stroke-dashoffset: 0;
+}
+.uw__draw__bean {
+  width: 275px;
+  height: 315px;
+  right: 5%;
+  transform: rotate(30deg);
+  stroke: black;
+  fill: transparent;
+  stroke-width: 1;
+  stroke-dasharray: 15 10;
+  stroke-dashoffset: 20;
+  transition: stroke-dashoffset 1.2s ease;
+}
+.uw__draw__bean:hover {
+  stroke-dashoffset: 0;
+}
+@media (max-width: 1024px) {
+  .uw__draw__burbujas, .uw__draw__ellipse, .uw__draw__morea, .uw__draw__naranja, .uw__draw__small, .uw__draw__hat, .uw__draw__light, .uw__draw__pc, .uw__draw__smile {
+    width: 90px;
+    height: 95px;
+  }
+  .uw__draw__cuadros {
+    width: 160px;
+    height: 170px;
+  }
+  .uw__draw__caracol {
+    width: 150px;
+    height: 160px;
+  }
+  .uw__draw__bean {
+    width: 225px;
+    height: 260px;
+  }
+}
+@media (max-width: 800px) {
+  .uw__draw__burbujas, .uw__draw__ellipse, .uw__draw__morea, .uw__draw__naranja, .uw__draw__small, .uw__draw__hat, .uw__draw__light, .uw__draw__pc, .uw__draw__smile {
+    width: 70px;
+    height: 75px;
+  }
+  .uw__draw__cuadros {
+    width: 120px;
+    height: 130px;
+  }
+  .uw__draw__caracol {
+    width: 120px;
+    height: 130px;
+  }
+  .uw__draw__bean {
+    width: 180px;
+    height: 210px;
+  }
+}
+
+.uw__statistics {
+  color: white;
+  background-color: #DAB6C2;
+  display: flex;
+  justify-content: center;
+}
+.uw__statistics__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 50px;
+}
+.uw__statistics__participants, .uw__statistics__budget {
+  text-align: center;
+  position: relative;
+}
+.uw__statistics__participants__count, .uw__statistics__budget__count {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.uw__objetive {
+  color: white;
+  background-color: #F47149;
+}
+.uw__objetive__content {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.uw__objetive h3 {
+  transition: font-size 0.5s ease, font-weight 0.5s ease;
+}
+.uw__objetive h3:hover {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.uw__about {
+  color: white;
+  background-color: #FA5F5B;
+}
+.uw__about__content {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.uw__about__content h3 {
+  transition: font-size 0.5s ease, font-weight 0.5s ease;
+}
+.uw__about__content h3:hover {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.uw__partners {
+  color: black;
+  background-color: white;
+}
+.uw__partners__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.uw__partners__carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.uw__partners__carousel__container {
+  overflow: hidden;
+}
+.uw__partners__carousel__container::before, .uw__partners__carousel__container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  z-index: 2;
+}
+.uw__partners__carousel__track {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 60px;
+  transition: transform 0.5s ease;
+}
+.uw__partners__carousel__slide {
+  flex: 0 0 auto;
+  width: 25%;
+  padding: 0 10px;
+}
+.uw__partners__carousel__slide img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.uw__partners__carousel__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 10px;
+  color: black;
+  cursor: pointer;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

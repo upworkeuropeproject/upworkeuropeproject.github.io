@@ -1,0 +1,29 @@
+@use 'colors';
+
+.uw__statistics {
+    color: $light;
+    background-color: $pink;
+
+    display: flex;
+    justify-content: center;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 50px;
+    }
+
+    // Estilos para los contadores de participantes y presupuesto
+    &__participants,
+    &__budget {
+        text-align: center;
+        position: relative; // Posición relativa para el pseudo-elemento
+
+        &__count {
+            font-size: 60px;
+            font-weight: 700;
+        }
+    }
+}

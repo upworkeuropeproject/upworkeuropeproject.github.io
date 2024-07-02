@@ -1,104 +1,12 @@
-$green: #5BAAAE;
-$orange: #F47149;
-$red: #FA5F5B;
-$pink: #DAB6C2;
+@import "colors.scss";
 
-.uw__header {
-    color: black;
-    background-color: white;
-
-    &__content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        z-index: 1;
-        left: 50%;
-        transform: translateX(-50%);
-
-        transition: all .5s ease; // Efecto de transición al hacer hover   
-    }
-
-    &__process {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    &__text {
-        display: flex;
-        align-items: center;
-        justify-content: center; 
-    }
-
-    &__logo {
-        width: 300px;
-        height: 105px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        opacity: 1; // Comenzar completamente visible
-        transition: opacity .5s ease; // Efecto de transición al hacer hover
-    }
-
-    &__nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        column-gap: 100px;
-        z-index: 2;
-
-        opacity: 0; // Comenzar completamente invisible
-        transition: opacity .5s ease; // Efecto de transición al hacer hover
-        
-        &__list {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            column-gap: 50px;
-        }
-
-        &__item {
-            cursor: pointer;
-            transition: all .5s ease; // Efecto de transición al hacer hover
-            
-            a {
-                font-size: 30px;
-                font-weight: 400;
-                word-wrap: break-word; 
-                text-decoration: none;
-
-                display: block;
-                
-                border-radius: 50%; // Hacer que el fondo sea un círculo
-                padding: 40px;
-                padding-top: 20%;
-                padding-bottom: 20%;
-
-                color: black;
-                background-color: rgba(0,0,0,0.1);
-            }
-            
-            &:hover {
-                a {
-                    color: #ccc; // Cambiar el color al hacer hover
-                }
-            }
-        }
-    }
-}
-
-.uw__draw {
-    color: white;
-    background-color: $green;
-}
+@import "header.scss";
+@import "footer.scss";
+@import "draw.scss";
+@import "statistics.scss";
 
 .uw__objetive {
-    color: white;
+    color: $light;
     background-color: $orange;
 
     &__content {
@@ -108,15 +16,20 @@ $pink: #DAB6C2;
         flex-direction: column;
         row-gap: 20px;
     }
-}
 
-.uw__stactic {
-    color: white;
-    background-color: $pink;
+    h3 {
+        transition: font-size 0.5s ease, font-weight 0.5s ease;
+
+        &:hover {
+            font-size: 45px;
+            font-weight: 700;
+        }
+    }
+    
 }
 
 .uw__about {
-    color: white;
+    color: $light;
     background-color: $red;
 
     &__content {
@@ -125,87 +38,87 @@ $pink: #DAB6C2;
         justify-content: center ;
         flex-direction: column;
         row-gap: 20px;
+
+        h3 {
+            transition: font-size 0.5s ease, font-weight 0.5s ease;
+    
+            &:hover {
+                font-size: 45px;
+                font-weight: 700;
+            }
+        }
     }
 }
 
 .uw__partners {
-    color: black;
-    background-color: white;
-}
-
-.uw__footer {
-    color: white;
-    background-color: black;
-
-    display: flex;
-    align-items: center;
-    justify-content: center ;
-    flex-direction: column;
-    row-gap: 50px;
+    color: $dark;
+    background-color: $light;
 
     &__content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+  
+    &__carousel {
+        position: relative;
         display: flex;
-        align-items: center;
-        justify-content: center ;
         flex-direction: column;
-        row-gap: 30px;
-    }
-
-    &__icons {
-        display: flex;
-        align-items: center;
+        align-content: center;
         justify-content: center;
-        flex-direction: row;
-        column-gap: 10px;
-    }
-
-    &__icon {
-        width: 100px;
-        height: 100px;
-
-        image {
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    &__bottom {
-        display: flex;
         align-items: center;
-        justify-content: center;
-        flex-direction: row;
-    }
 
-    &__copyright {
-        display: block;
-        position: relative;
+        &__container {
+            overflow: hidden;
 
-        text-align: center;
-        font-weight: 700;
-    }
-
-    &__up {
-        display: block;
-        position: relative;
-        right: -110%;
-        bottom: 20px;
-        transform: rotate(-90deg);
-
-        a {
-            font-size: 30px;
-            font-weight: 400;
-            word-wrap: break-word; 
-            text-decoration: none;
-
-            display: block;
-
-            color: white;
-        }
-        
-        &:hover {
-            a {
-                color: #ccc; // Cambiar el color al hacer hover
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 20%; // Ajusta este valor para cambiar el tamaño del área difuminada
+                height: 100%;
+                z-index: 2;
             }
+        }
+
+        &__track {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            column-gap: 60px;
+
+            transition: transform 0.5s ease;
+        }
+
+        &__slide {
+            flex: 0 0 auto;
+            width: calc(100% / 4); // Muestra 4 logos a la vez
+            padding: 0 10px;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+
+        &__button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            column-gap: 10px;   
+
+            color: $dark;
+            cursor: pointer;
+            z-index: 1;
+
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            
+            z-index: 1;
         }
     }
 }
