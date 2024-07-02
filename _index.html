@@ -7,6 +7,8 @@
     <title>UpWork</title>
 
     <link rel="stylesheet" href="styles/style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3"></script>
     <script src="js/home.js"></script>
 </head>
 <body>
@@ -16,7 +18,7 @@
                 UPWORK
             </h1>
             <svg class="uw__header__logo">
-                <image href="svg/logo.svg" />
+                <image href="svg/lg_logo.svg" />
             </svg>
         </div>
         <nav class="uw__header__nav">
@@ -25,12 +27,48 @@
                 <li class="uw__header__nav__item"><a href="#uw__objetive">Objetives</a></li>
                 <li class="uw__header__nav__item"><a href="#uw__draw">Notices</a></li>
                 <li class="uw__header__nav__item"><a href="#uw__about">About</a></li>
-            </yl>
+            </ul>
         </nav>
     </header>
     <section id="uw__draw" class="uw__draw">
         <div class="uw__draw__content">
-
+            
+            <svg class="uw__draw__caracol">
+                <path d="M0.34 88.46 C-5.22 164.14 59.21 188.02 91.34 187.02 123.46 186.02 173.46 165.89 177.46 110.89 181.46 55.89 155.34 1.02 104.34 0.02 53.34 -0.98 27.34 38.02 29.34 95.02 31.34 152.02 79.65 158.64 98.28 158.71 116.9 158.77 154.96 144.02 154.96 104.02 154.96 64.02 130.34 47.02 108.34 48.02 86.34 49.02 74.96 71.77 77.96 95.77 80.96 119.77 97.34 125.02 107.34 126.02 117.34 127.02 142.79 119.09 142.78 82.02 142.76 44.95 124.9 19 90.45 9.02 55.99 -0.96 5.9 12.78 0.34 88.46 z"></path>
+            </svg>
+            <svg class="uw__draw__bean">
+                <path d="M233.32 231.03 C255.32 198.03 281.32 145.03 273.32 93.03 265.32 41.03 229.32 1.03 175.32 0.03 121.32 -0.97 79.32 26.03 65.32 69.03 51.32 112.03 95.32 146.03 74.32 178.03 53.32 210.03 10.32 193.03 1.32 240.03 -7.68 287.03 30.32 315.03 90.32 314.03 150.32 313.03 211.32 264.03 233.32 231.03 z"></path>
+            </svg>
+            <svg class="uw__draw__burbujas">
+                <image href="svg/sv_burbujas.svg" />
+            </svg>
+            <svg class="uw__draw__cuadros">
+                <image href="svg/sv_cuadros.svg" />
+            </svg>
+            <svg class="uw__draw__ellipse">
+                <image href="svg/sv_ellipse.svg" />
+            </svg>
+            <svg class="uw__draw__morea">
+                <image href="svg/sv_morea.svg" />
+            </svg>
+            <svg class="uw__draw__naranja">
+                <image href="svg/sv_naranja.svg" />
+            </svg>
+            <svg class="uw__draw__small">
+                <image href="svg/sv_small.svg" />
+            </svg>
+            <svg class="uw__draw__hat">
+                <image href="svg/im_hat.svg" />
+            </svg>
+            <svg class="uw__draw__light">
+                <image href="svg/im_light.svg" />
+            </svg>
+            <svg class="uw__draw__pc">
+                <image href="svg/im_pc.svg" />
+            </svg>
+            <svg class="uw__draw__smile">
+                <image href="svg/im_smile.svg" />
+            </svg>
         </div>
     </section>
     <section id="uw__objetive" class="uw__objetive">
@@ -43,9 +81,16 @@
             </div>
         </div>
     </section>
-    <section id="uw__stactict" class="uw__stactic">
-        <div class="uw__stactict__content">
-
+    <section id="uw__statistics" class="uw__statistics">
+        <div class="uw__statistics__content">
+            <div class="uw__statistics__participants">
+                <div class="uw__statistics__participants__count">0</div>
+                <div class="uw__statistics__participants__title">participants</div>
+            </div>
+            <div class="uw__statistics__budget">
+                <div class="uw__statistics__budget__count ">0</div>
+                <div class="uw__statistics__budget__title">budget</div>
+            </div>
         </div>
     </section>
     <section id="uw__about" class="uw__about">
@@ -60,7 +105,34 @@
     </section>
     <section id="uw__partners" class="uw__partners">
         <div class="uw__partners__content">
-
+            <div class="uw__partners__carousel">
+                <div class="uw__partners__carousel__button">
+                    <div class="uw__partners__carousel__button__left">←</div>
+                    <div class="uw__partners__carousel__button__right">→</div>
+                </div>
+                <div class="uw__partners__carousel__container">
+                    <div class="uw__partners__carousel__track">
+                        <div class="uw__partners__carousel__slide">
+                            <img src="images/jp_gureak.jpg" alt="Gureak">
+                        </div>
+                        <div class="uw__partners__carousel__slide">
+                            <img src="images/jp_fd.jpg" alt="Fo Aarhus">
+                        </div>
+                        <div class="uw__partners__carousel__slide">
+                            <img src="images/jp_oloklirosi.jpg" alt="Oloklirosi">
+                        </div>
+                        <div class="uw__partners__carousel__slide">
+                            <img src="images/jp_sorotori.jpg" alt="Soro Tori">
+                        </div>
+                        <div class="uw__partners__carousel__slide">
+                            <img src="images/jp_stella.jpg" alt="Stella">
+                        </div>
+                        <div class="uw__partners__carousel__slide">
+                            <img src="images/jp_csci.jpg" alt="SCSI">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <footer id="uw__footer" class="uw__footer">
@@ -70,16 +142,16 @@
             </div>
             <div class="uw__footer__icons">
                 <svg class="uw__footer__icon">
-                    <image href="svg/green.svg" />
+                    <image href="svg/bt_green.svg" />
                 </svg>
                 <svg class="uw__footer__icon">
-                    <image href="svg/orange.svg" />
+                    <image href="svg/bt_orange.svg" />
                 </svg>
                 <svg class="uw__footer__icon">
-                    <image href="svg/red.svg" />
+                    <image href="svg/bt_red.svg" />
                 </svg>
                 <svg class="uw__footer__icon">
-                    <image href="svg/pink.svg" />
+                    <image href="svg/bt_pink.svg" />
                 </svg>
             </div>
             
